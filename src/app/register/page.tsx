@@ -1,7 +1,8 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import RegisterForm from '@/components/RegisterForm';
+// PASTIKAN import mengarah ke komponen RegisterForm yang baru kita buat
+import RegisterForm from '@/components/RegisterForm'; 
 
 const CAR_SLIDES = [
   { name: 'PORSCHE PANAMERA', img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=2070' },
@@ -45,6 +46,7 @@ export default function RegisterPage() {
           
           <div className="mt-8 lg:mt-12">
             <p className="text-gray-400 text-xs font-medium mb-2">Already have an account?</p>
+            {/* PASTIKAN link ini mengarah kembali ke root (/) atau halaman login kamu */}
             <Link href="/" className="inline-block font-bold text-gray-900 border-b-2 border-gray-900 pb-0.5 text-sm hover:opacity-70 transition-opacity">
               Login to account →
             </Link>
@@ -64,8 +66,9 @@ export default function RegisterPage() {
           <p className="text-[8px] lg:text-[9px] opacity-80 uppercase mt-1 tracking-wider">Best cars</p>
         </div>
 
+        {/* INI ADALAH KOMPONEN FORM YANG DIPANGGIL */}
         <div className="w-full max-w-[340px] md:max-w-[380px] z-10 px-4">
-          <RegisterForm />
+          <RegisterForm /> 
         </div>
 
         <div className="absolute bottom-10 left-8 lg:left-10 text-white text-[10px] lg:text-xs font-medium opacity-90 z-10 font-mono">
